@@ -1,1 +1,23 @@
-<p>search-criteria works!</p>
+<form #form="ngForm" (ngSubmit)="getDataFromTicketmaster(form)">
+    <input 
+        type="text"
+        name="keyword"
+        placeholder="Keyword"
+        ngModel >
+    <input 
+        type="text"
+        name="location"
+        placeholder="Location"
+        ngModel >
+    <input 
+        type="text"
+        name="startDate"
+        placeholder="Start Date (yyyy-mm-dd)"
+        ngModel >
+    <input 
+        type="text"
+        name="endDate"
+        placeholder="End Date (yyyy-mm-dd)"
+        ngModel >
+    <button>Search</button>
+</form>

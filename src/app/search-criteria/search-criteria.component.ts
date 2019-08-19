@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EventService } from '../event.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-search-criteria',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchCriteriaComponent implements OnInit {
 
-  constructor() { }
+  ticketmasterData: any;
+
+  constructor(private eventService: EventService) { }
 
   ngOnInit() {
+  }
+
+  getDataFromTicketmaster(form: NgForm) {
+    this.eventService.getTicketmasterData(form.value.keyword,).subscribe(response => {
+      console.log(response);
+    });
   }
 
 }
