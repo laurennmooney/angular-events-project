@@ -1,4 +1,4 @@
-<form #form="ngForm" (ngSubmit)="getDataFromTicketmaster(form)">
+<form #form="ngForm" (ngSubmit)="getData(form.value.keyword, form.value.city, form.value.startDate, form.value.endDate)">
     <input 
         type="text"
         name="keyword"
@@ -6,18 +6,16 @@
         ngModel >
     <input 
         type="text"
-        name="location"
+        name="city"
         placeholder="Location"
         ngModel >
     <input 
-        type="text"
+        type="date"
         name="startDate"
-        placeholder="Start Date (yyyy-mm-dd)"
         ngModel >
     <input 
-        type="text"
+        type="date"
         name="endDate"
-        placeholder="End Date (yyyy-mm-dd)"
         ngModel >
     <button>Search</button>
 </form>
