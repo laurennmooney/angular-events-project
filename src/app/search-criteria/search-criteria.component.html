@@ -1,3 +1,6 @@
+<header>
+  <h1>Search</h1>
+</header>
 <form
   #form="ngForm"
   (ngSubmit)="
@@ -9,25 +12,10 @@
     )
   "
 >
-  <div>
-    <label for="keyword">Search for Keyword</label>
-    <input
-      type="text"
-      id="keyword"
-      name="keyword"
-      placeholder="keyword"
-      ngModel
-    />
-    <label for="city">Location</label>
-    <input type="text" id="city" name="city" ngModel placeholder="location" />
-  </div>
-  <div>
-    <label for="startDate">From?</label>
-    <input type="date" id="startDate" name="startDate" ngModel />
-    <label for="endDate">To?</label>
-    <input type="date" id="endDate" name="endDate" ngModel />
-  </div>
-  <button>FIND EVENTS!</button>
+  <input type="text" name="keyword" placeholder="Keyword" ngModel />
+  <input type="text" name="city" placeholder="Location" ngModel />
+  <input type="date" name="startDate" ngModel />
+  <input type="date" name="endDate" ngModel />
+  <button>Search</button>
 </form>
-
-<app-event-list></app-event-list>
+<a routerLink="/bucketlist">Favorites</a>

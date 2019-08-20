@@ -1,1 +1,9 @@
-<p>bucketlist-page works!</p>
+<h1>Favorite Events</h1>
+<div *ngFor="let fave of faveList; index as i">
+  <p>{{ fave.name }}</p>
+  <p>{{ fave.dates.start.localDate }}</p>
+  <p>{{ fave.dates.start.localTime }}</p>
+  <button>Remove</button>
+</div>
+<a routerLink="/home">Return to search</a>
+<a routerLink="/eventlist">Return to events</a>
