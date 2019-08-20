@@ -5,9 +5,7 @@
     <p>{{ event.dates.start.localDate }}</p>
     <p>{{ event.dates.start.localTime }}</p>
     <p (click)="getDetails(event.id, i)">More details...</p>
-    <app-details
-        *ngIf="event.show"
-        [eventDetails]="this.details"
-        ></app-details>
+    <app-details *ngIf="event.show" [eventDetails]="this.details"></app-details>
     <button (click)="addFave(eventList[i])">Add as favorite</button>
-</div>
+  </div>
+</section>
