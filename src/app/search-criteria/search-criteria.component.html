@@ -1,0 +1,25 @@
+<header>
+    <h1>Search</h1>
+</header>
+<form #form="ngForm" (ngSubmit)="getData(form.value.keyword, form.value.city, form.value.startDate, form.value.endDate)">
+    <input 
+        type="text"
+        name="keyword"
+        placeholder="Keyword"
+        ngModel >
+    <input 
+        type="text"
+        name="city"
+        placeholder="Location"
+        ngModel >
+    <input 
+        type="date"
+        name="startDate"
+        ngModel >
+    <input 
+        type="date"
+        name="endDate"
+        ngModel >
+    <button>Search</button>
+</form>
+<a routerLink="/bucketlist">Favorites</a>
