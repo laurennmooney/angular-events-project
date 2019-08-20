@@ -8,9 +8,12 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 export class DetailsComponent implements OnInit {
   @Input() eventDetails: any;
 
+  attractionDetails: any[];
+
   constructor() { }
 
   ngOnInit() {
+    this.attractionDetails = this.eventDetails["_embedded"].attractions;
   }
 
 

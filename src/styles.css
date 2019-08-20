@@ -1,4 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 body {
   margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to right, #f0c27b, #7c227875);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 100vh; */
+}
+
+button {
+  font-family: 'Livvic', sans-serif;
 }

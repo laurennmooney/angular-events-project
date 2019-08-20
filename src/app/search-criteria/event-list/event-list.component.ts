@@ -35,3 +35,4 @@ export class EventListComponent implements OnInit {
       this.eventList[index].show = !this.eventList[index].show;
     });
   }
+}

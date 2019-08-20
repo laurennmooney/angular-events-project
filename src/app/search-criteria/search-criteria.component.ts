@@ -8,7 +8,6 @@ import { NgForm } from "@angular/forms";
   styleUrls: ["./search-criteria.component.css"]
 })
 export class SearchCriteriaComponent implements OnInit {
-  eventData: any;
 
   constructor(private eventService: EventService) {}
 
