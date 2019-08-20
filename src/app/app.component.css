@@ -1,0 +1,35 @@
+#navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("../assets/download.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150px;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  background: rgba(255, 255, 255, 0.637);
+  height: 95%;
+  width: 15%;
+  padding-right: 15px;
+  margin: 5px;
+  border-radius: 5px;
+}
+p {
+  font-size: 40px;
+  margin-left: 10px;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.active {
+  color: white;
+  background: black;
+  padding: 5px;
+  border-radius: 10px;
+}

@@ -42,6 +42,7 @@ export class EventService {
       )
       .subscribe(response => {
         console.log(response);
+        this.eventDetails = response;
       });
   }
 }
