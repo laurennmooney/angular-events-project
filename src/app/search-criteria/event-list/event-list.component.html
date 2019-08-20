@@ -5,9 +5,11 @@
     <p>{{ event.name }}</p>
     <p>{{ event.dates.start.localDate }}</p>
     <p>{{ event.dates.start.localTime }}</p>
-    <p (click)="getDetails(event.id)">More details...</p>
-
+    <p (click)="getDetails(event.id, i)">More details...</p>
+    <app-details
+        *ngIf="event.show"
+        [eventDetails]="this.details"
+        ></app-details>
     <button (click)="addFave(eventList[i])">Favorites</button>
-  </div>
-</section>
-<a routerLink="/home">Home</a>
+</div>
+<a routerLink="/home">Return to search</a>
