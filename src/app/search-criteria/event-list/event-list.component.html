@@ -1,5 +1,4 @@
 <h1>Event Listings</h1>
-<a routerLink="/bucketlist">See Favorites</a>
 <section>
   <div *ngFor="let event of eventList; index as i">
     <p>{{ event.name }}</p>
@@ -7,6 +6,6 @@
     <p>{{ event.dates.start.localTime }}</p>
     <p (click)="getDetails(event.id, i)">More details...</p>
     <app-details *ngIf="event.show" [eventDetails]="this.details"></app-details>
-    <button (click)="addFave(eventList[i])">Favorites</button>
+    <button (click)="addFave(eventList[i])">Add as favorite</button>
   </div>
 </section>
