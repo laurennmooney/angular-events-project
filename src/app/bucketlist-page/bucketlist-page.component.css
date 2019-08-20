@@ -1,6 +1,7 @@
 #favoriteContainer {
   width: 95%;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
@@ -25,4 +26,20 @@ a {
   color: white;
   text-decoration: none;
   background: rgb(172, 89, 161);
+}
+#favInfo {
+  display: flex;
+  border: none;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#favDetails {
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  border: none;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
