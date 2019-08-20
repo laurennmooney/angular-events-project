@@ -11,6 +11,7 @@ export class EventService {
   eventList: any[] = [];
   favorites: any[] = [];
   eventDetails: any;
+  showDetails: boolean = false;
 
   getEventData(
     keyword: string,
@@ -23,6 +24,7 @@ export class EventService {
         `https://app.ticketmaster.com/discovery/v2/events.json?size=20&apikey=cXlfgaVOkdGE8RepkWBgQEwQL6FUgYq7&keyword=${keyword}&locale=*&startDateTime=${startDate}T00:00:00Z&endDateTime=${endDate}T23:59:59Z&city=${city}`
       )
       .subscribe(response => {
+        console.log(response);
         this.eventList = response["_embedded"].events;
         this.router.navigate(["/eventlist"]);
       });

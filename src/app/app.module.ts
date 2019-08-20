@@ -8,6 +8,7 @@ import { BucketlistPageComponent } from './bucketlist-page/bucketlist-page.compo
 import { EventService } from './event.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { DetailsComponent } from './details/details.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: SearchCriteriaComponent },
@@ -21,7 +22,8 @@ const appRoutes: Routes = [
     AppComponent,
     SearchCriteriaComponent,
     EventListComponent,
-    BucketlistPageComponent
+    BucketlistPageComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

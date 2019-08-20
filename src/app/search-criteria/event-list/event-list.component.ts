@@ -10,6 +10,7 @@ export class EventListComponent implements OnInit {
 
   eventList: any[];
   details: any;
+  showDetails: boolean;
 
   constructor(private eventService: EventService) { }
 
@@ -23,6 +24,7 @@ export class EventListComponent implements OnInit {
 
   getDetails(id: string) {
     this.details = this.eventService.getEventDetails(id);
+    this.showDetails = !this.eventService.showDetails;
   }
 
 
