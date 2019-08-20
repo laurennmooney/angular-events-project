@@ -10,6 +10,7 @@ export class EventService {
 
   eventList: any[] = [];
   favorites: any[] = [];
+  eventDetails: any;
 
   getEventData(
     keyword: string,
@@ -23,7 +24,6 @@ export class EventService {
       )
       .subscribe(response => {
         this.eventList = response["_embedded"].events;
-        console.log(this.eventList);
         this.router.navigate(["/eventlist"]);
       });
   }
@@ -31,6 +31,11 @@ export class EventService {
   addToFavorites(index: number) {
     console.log("you favorited this");
     this.favorites.push(index);
-    console.log(this.favorites);
+  }
+
+  getEventDetails(id: string) {
+    this.http.get(`https://app.ticketmaster.com/discovery/v2/events/${id}?apikey=cXlfgaVOkdGE8RepkWBgQEwQL6FUgYq7`).subscribe(response => {
+      console.log(response);
+    });
   }
 }

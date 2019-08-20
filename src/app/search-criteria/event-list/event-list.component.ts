@@ -9,16 +9,20 @@ import { EventService } from '../../event.service';
 export class EventListComponent implements OnInit {
 
   eventList: any[];
+  details: any;
 
   constructor(private eventService: EventService) { }
 
   ngOnInit() {
     this.eventList = this.eventService.eventList;
-    console.log(this.eventList);
   }
 
   addFave(index: number) {
     this.eventService.addToFavorites(index);
+  }
+
+  getDetails(id: string) {
+    this.details = this.eventService.getEventDetails(id);
   }
 
 
