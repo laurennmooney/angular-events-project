@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: 'home', component: SearchCriteriaComponent },
+  { path: 'eventlist', component: EventListComponent },
   { path: 'bucketlist', component: BucketlistPageComponent },
   { path: '**', redirectTo: 'home', pathMatch: 'full'}
 ];

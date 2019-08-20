@@ -1,3 +1,9 @@
-<div>
-    
+<h1>Event Listings</h1>
+<a routerLink="/bucketlist">See Favorites</a>
+<div *ngFor="let event of eventList; index as i">
+    <p>{{ event.name }}</p>
+    <p>{{ event.dates.start.localDate }}</p>
+    <p>{{ event.dates.start.localTime }}</p>
+    <button (click)="addFave(eventList[i])">Star</button>
 </div>
+<a routerLink="/home">Return to search</a>

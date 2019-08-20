@@ -10,15 +10,10 @@ import { NgForm } from '@angular/forms';
 export class SearchCriteriaComponent implements OnInit {
 
   eventData: any;
-  eventList: any;
 
   constructor(private eventService: EventService) { }
 
   ngOnInit() {
-  }
-
-  getEventList() {
-    this.eventList = this.eventService.eventList;
   }
 
   getData(    
@@ -27,7 +22,5 @@ export class SearchCriteriaComponent implements OnInit {
     startDate: string,
     endDate: string): void {
     this.eventService.getEventData(keyword, city, startDate, endDate);
-    this.getEventList();
-    console.log(this.eventList);
   }
 }

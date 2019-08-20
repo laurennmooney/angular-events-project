@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EventService } from '../event.service';
 
 @Component({
   selector: 'app-bucketlist-page',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BucketlistPageComponent implements OnInit {
 
-  constructor() { }
+  faveList: any[];
+
+  constructor(private eventService: EventService) { }
 
   ngOnInit() {
+    this.faveList = this.eventService.favorites;
+    console.log(this.faveList);
   }
 
 }
