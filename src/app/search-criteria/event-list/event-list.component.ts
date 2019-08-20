@@ -1,18 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { EventService } from '../../event.service';
+import { Component, OnInit } from "@angular/core";
+import { EventService } from "../../event.service";
 
 @Component({
-  selector: 'app-event-list',
-  templateUrl: './event-list.component.html',
-  styleUrls: ['./event-list.component.css']
+  selector: "app-event-list",
+  templateUrl: "./event-list.component.html",
+  styleUrls: ["./event-list.component.css"]
 })
 export class EventListComponent implements OnInit {
-
   eventList: any[];
   details: any;
   show: boolean;
 
-  constructor(private eventService: EventService) { }
+  constructor(private eventService: EventService) {}
 
   ngOnInit() {
     this.eventList = this.eventService.eventList;
@@ -36,5 +35,3 @@ export class EventListComponent implements OnInit {
       this.eventList[index].show = !this.eventList[index].show;
     });
   }
-
-}

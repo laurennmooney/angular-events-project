@@ -35,6 +35,9 @@ export class EventService {
     console.log("you favorited this");
     this.favorites.push(index);
   }
+  removeFavorites(index: number) {
+    this.favorites.splice(index, 1);
+  }
 
   getEventDetails(id: string): Observable<any> {
     return this.http.get(`https://app.ticketmaster.com/discovery/v2/events/${id}?apikey=cXlfgaVOkdGE8RepkWBgQEwQL6FUgYq7`);

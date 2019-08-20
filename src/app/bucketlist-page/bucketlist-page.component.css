@@ -1,0 +1,8 @@
+#favoriteContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  width: 25%;
+  border: 1px solid black;
+}
