@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Router } from "@angular/router";
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: "root"
@@ -35,11 +36,7 @@ export class EventService {
     this.favorites.push(index);
   }
 
-  getEventDetails(id: string) {
-    this.http.get(`https://app.ticketmaster.com/discovery/v2/events/${id}?apikey=cXlfgaVOkdGE8RepkWBgQEwQL6FUgYq7`).subscribe(response => {
-      // console.log(response);
-      this.eventDetails = response;
-      console.log(this.eventDetails);
-    });
+  getEventDetails(id: string): Observable<any> {
+    return this.http.get(`https://app.ticketmaster.com/discovery/v2/events/${id}?apikey=cXlfgaVOkdGE8RepkWBgQEwQL6FUgYq7`);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-details',
@@ -6,6 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
+  @Input() index: number;
   @Output() toggleDetailsEvent = new EventEmitter<any>();
 
   constructor() { }
@@ -13,9 +14,9 @@ export class DetailsComponent implements OnInit {
   ngOnInit() {
   }
 
-  toggleMoreDetails() {
-    this.toggleDetailsEvent.emit();
-  }
+  // toggleMoreDetails(index: number) {
+  //   this.toggleDetailsEvent.emit(index);
+  // }
 
 
 

@@ -21,22 +21,20 @@ export class EventListComponent implements OnInit {
     });
     console.log(this.eventList);
     this.details = this.eventService.eventDetails;
-    this.show = false;
   }
 
   addFave(index: number) {
     this.eventService.addToFavorites(index);
   }
 
-  getDetails(id: string) {
-    this.details = this.eventService.getEventDetails(id);
+  getDetails(id: string, index: number) {
+    this.eventService.getEventDetails(id).subscribe(response => {
+      this.details = response;
+      console.log(this.details);
+      console.log(index);
+      console.log(this.eventList);
+      this.eventList[index].show = !this.eventList[index].show;
+    });
   }
-
-  toggleDetails() {
-    console.log("toggle");
-    this.show = !this.show;
-  }
-
-
 
 }
