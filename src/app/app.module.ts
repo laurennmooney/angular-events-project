@@ -9,9 +9,10 @@ import { EventService } from "./event.service";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 import { DetailsComponent } from "./details/details.component";
+import { HomeComponent } from "./home/home.component";
 
 const appRoutes: Routes = [
-  { path: "home", component: SearchCriteriaComponent },
+  { path: "home", component: HomeComponent },
   { path: "eventlist", component: EventListComponent },
   { path: "bucketlist", component: BucketlistPageComponent },
   { path: "**", redirectTo: "home", pathMatch: "full" }
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
     SearchCriteriaComponent,
     EventListComponent,
     BucketlistPageComponent,
-    DetailsComponent
+    DetailsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

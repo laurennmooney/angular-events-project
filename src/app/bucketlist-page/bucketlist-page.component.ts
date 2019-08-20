@@ -15,4 +15,7 @@ export class BucketlistPageComponent implements OnInit {
     this.faveList = this.eventService.favorites;
     console.log(this.faveList);
   }
+  removeFavorite(index: number) {
+    this.eventService.removeFavorites(index);
+  }
 }

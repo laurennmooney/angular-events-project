@@ -1,21 +1,49 @@
-<header>
-  <h1>Search</h1>
-</header>
-<form
-  #form="ngForm"
-  (ngSubmit)="
-    getData(
-      form.value.keyword,
-      form.value.city,
-      form.value.startDate,
-      form.value.endDate
-    )
-  "
->
-  <input type="text" name="keyword" placeholder="Keyword" ngModel />
-  <input type="text" name="city" placeholder="Location" ngModel />
-  <input type="date" name="startDate" ngModel />
-  <input type="date" name="endDate" ngModel />
-  <button>Search</button>
-</form>
-<a routerLink="/bucketlist">Favorites</a>
+<div id="navBar">
+  <p>The Amazing Event App!!!</p>
+  <nav>
+    <a routerLinkActive="active" routerLink="/home">Home</a>
+    <a routerLinkActive="active" routerLink="/bucketlist">Favorites</a>
+  </nav>
+</div>
+<div id="spaceBar">
+  <div id="searchBar">
+    <header>
+      <h1>Search for Events</h1>
+    </header>
+    <form
+      #form="ngForm"
+      (ngSubmit)="
+        getData(
+          form.value.keyword,
+          form.value.city,
+          form.value.startDate,
+          form.value.endDate
+        )
+      "
+    >
+      <div id="inputs">
+        <input
+          type="text"
+          class="textInput"
+          name="keyword"
+          placeholder="Keyword"
+          ngModel
+        />
+        <input
+          type="text"
+          class="textInput"
+          name="city"
+          placeholder="Location"
+          ngModel
+        />
+
+        <input type="date" name="startDate" ngModel />
+        <input type="date" name="endDate" ngModel />
+      </div>
+
+      <button id="searchBtn">Search</button>
+    </form>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
