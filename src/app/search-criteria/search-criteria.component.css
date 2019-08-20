@@ -3,9 +3,10 @@
   justify-content: space-between;
   align-items: center;
   background-image: url("../../assets/IVJkatvXRj+RtMCmYVZfbA_thumb_2724.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
   height: 137px;
+  width: 100%;
 }
 nav {
   display: flex;
@@ -23,9 +24,9 @@ nav {
   font-size: 50px;
   margin: 0;
   background: rgba(32, 30, 30, 0.801);
-  padding: 5px 5px 5px 20px;
+  padding: 37px 0;
+  text-align: center;
   width: 325px;
-  /* border-radius: 5px; */
   color: white;
 }
 a {

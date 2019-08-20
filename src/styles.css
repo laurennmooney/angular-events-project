@@ -11,4 +11,15 @@ body {
 
 button {
   font-family: 'Livvic', sans-serif;
+  background: gray;
+  border: none;
+  padding: 8px 0;
+  font-size: 18px;
+  color: white;
+  margin-top: 5px;
+}
+
+button:hover {
+  background: lightgrey;
+  cursor: pointer;
 }
