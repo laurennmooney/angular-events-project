@@ -1,20 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { EventService } from '../event.service';
+import { Component, OnInit } from "@angular/core";
+import { EventService } from "../event.service";
 
 @Component({
-  selector: 'app-bucketlist-page',
-  templateUrl: './bucketlist-page.component.html',
-  styleUrls: ['./bucketlist-page.component.css']
+  selector: "app-bucketlist-page",
+  templateUrl: "./bucketlist-page.component.html",
+  styleUrls: ["./bucketlist-page.component.css"]
 })
 export class BucketlistPageComponent implements OnInit {
-
   faveList: any[];
 
-  constructor(private eventService: EventService) { }
+  constructor(private eventService: EventService) {}
 
   ngOnInit() {
     this.faveList = this.eventService.favorites;
     console.log(this.faveList);
   }
-
+  removeFavorite(index: number) {
+    this.eventService.removeFavorites(index);
+  }
 }

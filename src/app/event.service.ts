@@ -34,10 +34,18 @@ export class EventService {
     console.log("you favorited this");
     this.favorites.push(index);
   }
+  removeFavorites(index: number) {
+    this.favorites.splice(index, 1);
+  }
 
   getEventDetails(id: string) {
-    this.http.get(`https://app.ticketmaster.com/discovery/v2/events/${id}?apikey=cXlfgaVOkdGE8RepkWBgQEwQL6FUgYq7`).subscribe(response => {
-      console.log(response);
-    });
+    this.http
+      .get(
+        `https://app.ticketmaster.com/discovery/v2/events/${id}?apikey=cXlfgaVOkdGE8RepkWBgQEwQL6FUgYq7`
+      )
+      .subscribe(response => {
+        console.log(response);
+        this.eventDetails = response;
+      });
   }
 }

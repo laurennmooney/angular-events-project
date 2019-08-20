@@ -1,0 +1,10 @@
+section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+div {
+  width: 25%;
+  margin: 20px;
+  border: 1px solid black;
+}
