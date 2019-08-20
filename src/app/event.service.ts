@@ -19,6 +19,7 @@ export class EventService {
     startDate: string,
     endDate: string
   ) {
+    // this.eventList = [];
     this.http
       .get(
         `https://app.ticketmaster.com/discovery/v2/events.json?size=20&apikey=cXlfgaVOkdGE8RepkWBgQEwQL6FUgYq7&keyword=${keyword}&locale=*&startDateTime=${startDate}T00:00:00Z&endDateTime=${endDate}T23:59:59Z&city=${city}`
