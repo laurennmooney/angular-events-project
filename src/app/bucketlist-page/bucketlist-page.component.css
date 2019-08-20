@@ -1,9 +1,17 @@
 #favoriteContainer {
+  width: 95%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   flex-wrap: wrap;
-  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+div {
   width: 25%;
+  margin: 20px;
   border: 1px solid black;
   box-shadow: 0px 0px 10px 0px rgb(117, 113, 113);
 }
@@ -16,4 +24,33 @@ main {
 
 h1 {
   font-size: 45px;
+}
+h1 {
+  padding-left: 15px;
+}
+a {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  background: rgb(172, 89, 161);
+}
+#favInfo {
+  display: flex;
+  border: none;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#favDetails {
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  border: none;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
