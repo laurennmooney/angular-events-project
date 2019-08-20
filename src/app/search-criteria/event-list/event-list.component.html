@@ -6,7 +6,9 @@
     <p>{{ event.dates.start.localDate }}</p>
     <p>{{ event.dates.start.localTime }}</p>
     <p (click)="getDetails(event.id)">More details...</p>
-    
+    <app-details
+        *ngIf="show"
+        (toggleDetailsEvent)="toggleDetails()"></app-details>
     <button (click)="addFave(eventList[i])">Favorites</button>
 </div>
 <a routerLink="/home">Return to search</a>

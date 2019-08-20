@@ -10,12 +10,18 @@ export class EventListComponent implements OnInit {
 
   eventList: any[];
   details: any;
-  showDetails: boolean;
+  show: boolean;
 
   constructor(private eventService: EventService) { }
 
   ngOnInit() {
     this.eventList = this.eventService.eventList;
+    this.eventList.forEach(event => {
+      event.show = false;
+    });
+    console.log(this.eventList);
+    this.details = this.eventService.eventDetails;
+    this.show = false;
   }
 
   addFave(index: number) {
@@ -24,7 +30,11 @@ export class EventListComponent implements OnInit {
 
   getDetails(id: string) {
     this.details = this.eventService.getEventDetails(id);
-    this.showDetails = !this.eventService.showDetails;
+  }
+
+  toggleDetails() {
+    console.log("toggle");
+    this.show = !this.show;
   }
 
 
