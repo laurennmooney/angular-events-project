@@ -5,7 +5,7 @@
       <p>{{ fave.name }}</p>
       <p>{{ fave.dates.start.localDate }}</p>
       <p>{{ fave._embedded.venues[0].city.name }}</p>
-      <p (click)="getDetails(fave.id, i)">More details...</p>
+      <p (click)="getDetails(i)">More details...</p>
       <button id="removeButton" (click)="removeFavorite(i)">Remove</button>
     </div>
     <div id="favDetails">
