@@ -5,11 +5,17 @@
       <p>{{ fave.name }}</p>
       <p>{{ fave.dates.start.localDate }}</p>
       <p>{{ fave._embedded.venues[0].city.name }}</p>
-      <p (click)="getDetails(fave.id, i)">More details...</p>
+      <p class="seeMore" (click)="getDetails(i)">More details...</p>
       <button id="removeButton" (click)="removeFavorite(i)">Remove</button>
     </div>
-    <div id="favDetails">
-      <!-- <app-details *ngIf="fave.show" [eventDetails]="this.details"></app-details> -->
+    <div *ngIf="fave.show" class="details" id="favDetails">
+      <p>Venue: {{ fave._embedded.venues[0].name }}</p>
+      <p>
+        Address: {{ fave._embedded.venues[0].address.line1 }}
+        {{ fave._embedded.venues[0].address.line2 }}
+      </p>
+      <p>Time: {{ fave.dates.start.localTime }}</p>
+      <p><a href="{{ fave.url }}" target="_blank">Ticket information</a></p>
     </div>
   </div>
 </main>
