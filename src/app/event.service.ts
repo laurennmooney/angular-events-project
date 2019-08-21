@@ -29,6 +29,7 @@ export class EventService {
     console.log("you favorited this");
     this.favorites.push(index);
   }
+
   removeFavorites(index: number) {
     this.favorites.splice(index, 1);
   }

@@ -11,7 +11,6 @@ export class EventListComponent implements OnInit {
   eventList: any[];
   details: any;
   show: boolean;
-  attractions: any[];
   index: number;
 
   constructor(
