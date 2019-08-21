@@ -51,6 +51,6 @@ button {
   font-weight: bold;
 }
 
-/* .show {
-  display: hidden;
-} */
+.favorite {
+  background: rgba(255, 217, 0, 0.61);
+}

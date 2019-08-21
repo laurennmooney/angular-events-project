@@ -12,6 +12,7 @@ export class EventListComponent implements OnInit {
   details: any;
   show: boolean;
   index: number;
+  fave: boolean;
 
   constructor(
     private eventService: EventService,

@@ -16,7 +16,8 @@
         <p>Time: {{ event.dates.start.localTime }}</p>
         <p><a href="{{ event.url }}" target="_blank">Ticket information</a></p>
       </div>
-      <button (click)="addFave(eventList[i])">Add as favorite</button>
+      <button *ngIf="!event.fave" (click)="addFave(eventList[i])">Add to favorites</button>
+      <button *ngIf="event.fave" class="favorite">Favorite!</button>
     </div>
   </section>
 </main>

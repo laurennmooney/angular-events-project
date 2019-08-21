@@ -13,6 +13,7 @@ export class EventService {
   favorites: any[] = [];
   eventDetails: any;
   showDetails: boolean = false;
+
   getEventData(
     keyword: string,
     city: string,
@@ -28,6 +29,10 @@ export class EventService {
   addToFavorites(index: number) {
     console.log("you favorited this");
     this.favorites.push(index);
+    this.favorites.forEach(fave => {
+      fave.fave = true;
+    });
+    console.log(this.favorites);
   }
 
   removeFavorites(index: number) {
