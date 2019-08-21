@@ -1,9 +1,9 @@
-<div>
-    <p>Venue: {{eventDetails._embedded.venues[0].name }}</p>
-    <p>Address: {{ eventDetails._embedded.venues[0].address.line1}} {{ eventDetails._embedded.venues[0].address.line2}}</p>
-    <p>Time: {{ eventDetails.dates.start.localTime }}</p>
-    <p><a href="{{ eventDetails.url }}" target="_blank">Ticket information</a></p>
-    <span *ngFor="let attraction of attractionDetails">
-        <p>Click for more information: <a href="{{ attraction.url }}" target="_blank">{{ attraction.name }}</a></p>
-    </span>
-</div>
+<!-- <div>
+  <p>Venue: {{event._embedded.venues[0].name }}</p>
+  <p>Address: {{ event._embedded.venues[0].address.line1}} {{ event._embedded.venues[0].address.line2}}</p>
+  <p>Time: {{ event.dates.start.localTime }}</p>
+  <p><a href="{{ event.url }}" target="_blank">Ticket information</a></p>
+  <span *ngFor="let attraction of attractionDetails">
+    <p>Click for more information: <a href="{{ attraction.url }}" target="_blank">{{ attraction.name }}</a></p>
+  </span>
+</div> -->

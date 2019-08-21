@@ -10,6 +10,7 @@
   transform: translateX(-50%);
   box-shadow: 0px 0px 10px 0px rgb(117, 113, 113);
   background: white;
+  margin: 10px 0;
 }
 
 main {
@@ -41,6 +42,7 @@ a {
   justify-content: space-evenly;
   align-items: center;
 }
+
 #favDetails {
   width: 100%;
   flex-direction: row;

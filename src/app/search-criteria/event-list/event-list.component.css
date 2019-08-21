@@ -5,7 +5,7 @@ section {
   flex-wrap: wrap;
 }
 
-div {
+.event {
   width: 25%;
   margin: 20px;
   background: white;
@@ -40,4 +40,10 @@ button {
 .seeMore:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.details {
+  background: rgba(211, 211, 211, 0.548);
+  padding: 10px;
+  margin-bottom: 10px;
 }

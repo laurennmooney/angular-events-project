@@ -18,17 +18,11 @@ export class EventService {
     city: string,
     startDate: string,
     endDate: string
-  ) {
+  ): Observable<any> {
     // this.eventList = [];
-    this.http
-      .get(
-        `https://app.ticketmaster.com/discovery/v2/events.json?size=20&apikey=cXlfgaVOkdGE8RepkWBgQEwQL6FUgYq7&keyword=${keyword}&locale=*&startDateTime=${startDate}T00:00:00Z&endDateTime=${endDate}T23:59:59Z&city=${city}`
-      )
-      .subscribe(response => {
-        // console.log(response);
-        this.eventList = response["_embedded"].events;
-        this.router.navigate(["/eventlist"]);
-      });
+    return this.http.get(
+      `https://app.ticketmaster.com/discovery/v2/events.json?size=20&apikey=cXlfgaVOkdGE8RepkWBgQEwQL6FUgYq7&keyword=${keyword}&locale=*&startDateTime=${startDate}T00:00:00Z&endDateTime=${endDate}T23:59:59Z&city=${city}`
+    );
   }
 
   addToFavorites(index: number) {
@@ -37,11 +31,5 @@ export class EventService {
   }
   removeFavorites(index: number) {
     this.favorites.splice(index, 1);
-  }
-
-  getEventDetails(id: string): Observable<any> {
-    return this.http.get(
-      `https://app.ticketmaster.com/discovery/v2/events/${id}?apikey=cXlfgaVOkdGE8RepkWBgQEwQL6FUgYq7`
-    );
   }
 }

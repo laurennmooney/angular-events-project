@@ -1,15 +1,15 @@
 <main>
-<h1>Your Favorite Events</h1>
-<div id="favoriteContainer" *ngFor="let fave of faveList; index as i">
-  <div id="favInfo">
-    <p>{{ fave.name }}</p>
-    <p>{{ fave.dates.start.localDate }}</p>
-    <p>{{ fave._embedded.venues[0].city.name }}</p>
-    <p (click)="getDetails(fave.id, i)">More details...</p>
-    <button id="removeButton"(click)="removeFavorite(i)">Remove</button>
+  <h1>Your Favorite Events</h1>
+  <div id="favoriteContainer" *ngFor="let fave of faveList; index as i">
+    <div id="favInfo">
+      <p>{{ fave.name }}</p>
+      <p>{{ fave.dates.start.localDate }}</p>
+      <p>{{ fave._embedded.venues[0].city.name }}</p>
+      <p (click)="getDetails(fave.id, i)">More details...</p>
+      <button id="removeButton" (click)="removeFavorite(i)">Remove</button>
+    </div>
+    <div id="favDetails">
+      <!-- <app-details *ngIf="fave.show" [eventDetails]="this.details"></app-details> -->
+    </div>
   </div>
-  <div id="favDetails">
-    <app-details *ngIf="fave.show" [eventDetails]="this.details"></app-details>
-  </div>
-</div>
 </main>
