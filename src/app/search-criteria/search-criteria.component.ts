@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { EventService } from "../event.service";
 import { NgForm } from "@angular/forms";
 import { Router } from "@angular/router";
 
@@ -9,7 +8,7 @@ import { Router } from "@angular/router";
   styleUrls: ["./search-criteria.component.css"]
 })
 export class SearchCriteriaComponent implements OnInit {
-  constructor(private eventService: EventService, private router: Router) {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
 
