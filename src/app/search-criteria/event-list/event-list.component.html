@@ -8,11 +8,11 @@
       <p>{{ event._embedded.venues[0].city.name }}</p>
       <p class="seeMore" (click)="getDetails(i)">See more details...</p>
       <div *ngIf="event.show" class="details">
-        <p>Venue: {{ event._embedded.venues[0].name }}</p>
-        <p>
-          Address: {{ event._embedded.venues[0].address.line1 }}
-          {{ event._embedded.venues[0].address.line2 }}
-        </p>
+
+        <p>Venue: {{event._embedded.venues[0].name }}</p>
+        <p>Address: {{ event._embedded.venues[0].address.line1}}</p>
+        <p>{{ event._embedded.venues[0].address.line2}}</p>
+
         <p>Time: {{ event.dates.start.localTime }}</p>
         <p><a href="{{ event.url }}" target="_blank">Ticket information</a></p>
       </div>
