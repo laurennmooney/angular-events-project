@@ -9,7 +9,7 @@ section {
 .event {
   width: 25%;
   margin: 20px;
-  background: white;
+  background: rgba(255, 255, 255, 0.596);
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0px 0px 10px 0px rgb(117, 113, 113);
@@ -35,7 +35,8 @@ button {
 }
 
 .seeMore {
-  color: rgb(172, 164, 164);
+  color: rgb(107, 97, 97);
+  text-align: right;
 }
 
 .seeMore:hover {
@@ -44,9 +45,10 @@ button {
 }
 
 .details {
-  background: rgba(211, 211, 211, 0.548);
+  /* background: rgba(218, 208, 208, 0.822); */
   padding: 10px;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 /* .show {

@@ -2,43 +2,50 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: url("../../assets/IVJkatvXRj+RtMCmYVZfbA_thumb_2724.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.356), rgba(0, 0, 0, .356)), url("../../assets/IVJkatvXRj+RtMCmYVZfbA_thumb_2724.jpg");
   background-repeat: repeat;
   background-size: cover;
   height: 137px;
   width: 100%;
+  border-bottom: black 5px solid;
 }
+
 nav {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-end;
   background: rgba(32, 30, 30, 0.801);
-  height: 100%;
+  height: 101%;
   width: 15%;
   font-weight: bold;
   padding-right: 15px;
   font-size: 20px;
 }
+
 #title {
   font-size: 50px;
   margin: 0;
   background: rgba(32, 30, 30, 0.801);
-  padding: 37px 0;
+  padding: 33px 0;
   text-align: center;
   width: 325px;
   color: white;
+  font-family: 'Permanent Marker', cursive;
 }
+
 a {
   color: white;
   text-decoration: none;
   padding: 10px;
 }
+
 .active {
   background: rgba(145, 141, 141, 0.534);
   padding: 10px;
   border-radius: 5px;
 }
+
 #searchBar {
   display: flex;
   justify-content: space-evenly;
@@ -50,19 +57,22 @@ a {
   left: 50%;
   top: 20px;
   transform: translateX(-50%);
-  background: white;
+  background: rgba(255, 255, 255, 0.596);
   padding: 10px;
 }
+
 form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
+
 input {
   margin: 3px;
   font-family: "Livvic", sans-serif;
 }
+
 .textInput {
   padding: 2px;
 }
@@ -73,6 +83,7 @@ input {
   border-radius: 5px;
   font-size: 15px;
 }
+
 #routerOutlet {
   width: 100%;
   position: relative;

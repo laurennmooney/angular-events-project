@@ -1,8 +1,70 @@
 h1 {
-  /* margin: 50px 0 0 10px; */
   font-size: 45px;
+  margin: 0;
 }
 
 main {
-  margin: 30px;
+  margin: 0 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome {
+  background: rgba(255, 255, 255, 0.596);
+  box-shadow: 0px 0px 10px 0px rgb(117, 113, 113);
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.adds {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+div {
+  box-shadow: 0px 0px 10px 0px rgb(117, 113, 113);
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.596);
+  display: flex;
+}
+
+.ticket {
+  margin-right: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.GC {
+  margin-left: 10px;
+  flex-direction: row;
+  align-items: center;
+}
+
+#ticketmaster {
+  margin-top: 20px;
+  width: 70%;
+}
+
+#grandcircus {
+  margin-left: 30px;
+}
+
+.welcome h1,
+h3,
+h2 {
+  margin: 0;
+}
+
+.welcome h1 {
+  font-family: 'Permanent Marker', cursive;
+  margin-bottom: 5px;
 }

@@ -20,6 +20,6 @@ button {
 }
 
 button:hover {
-  background: lightgrey;
+  background: rgba(172, 89, 161, 0.774);
   cursor: pointer;
 }
