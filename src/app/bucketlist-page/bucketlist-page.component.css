@@ -8,25 +8,22 @@
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-}
-div {
-  width: 25%;
-  margin: 20px;
-  border: 1px solid black;
+  box-shadow: 0px 0px 10px 0px rgb(117, 113, 113);
+  background: white;
+  margin: 10px 0;
 }
 
 main {
   display: flex;
   flex-direction: column;
-  margin: 30px;
+  margin: 30px 10px;
 }
 
 h1 {
   font-size: 45px;
+  margin: 0 30px;
 }
-h1 {
-  padding-left: 15px;
-}
+
 a {
   position: relative;
   left: 50%;
@@ -37,6 +34,7 @@ a {
   text-decoration: none;
   background: rgb(172, 89, 161);
 }
+
 #favInfo {
   display: flex;
   border: none;
@@ -44,6 +42,7 @@ a {
   justify-content: space-evenly;
   align-items: center;
 }
+
 #favDetails {
   width: 100%;
   flex-direction: row;
@@ -52,4 +51,8 @@ a {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+}
+
+#removeButton {
+  padding: 5px;
 }

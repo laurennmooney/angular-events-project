@@ -1,21 +1,22 @@
 <main>
   <h1>Event Listings</h1>
   <section>
-    <div *ngFor="let event of eventList; index as i">
+    <div class="event" *ngFor="let event of eventList; index as i">
       <img src="{{ event.images[0].url }}" />
       <p>{{ event.name }}</p>
       <p>{{ event.dates.start.localDate }}</p>
       <p>{{ event._embedded.venues[0].city.name }}</p>
-      <p class="seeMore" (click)="getDetails(event.id, i)">
-        See more details...
-      </p>
-      <app-details
-        *ngIf="event.show"
-        [eventDetails]="this.details"
-      ></app-details>
-      <button (click)="addFave(eventList[i])">
-        Add as favorite
-      </button>
+      <p class="seeMore" (click)="getDetails(i)">See more details...</p>
+      <div *ngIf="event.show" class="details">
+        <p>Venue: {{ event._embedded.venues[0].name }}</p>
+        <p>
+          Address: {{ event._embedded.venues[0].address.line1 }}
+          {{ event._embedded.venues[0].address.line2 }}
+        </p>
+        <p>Time: {{ event.dates.start.localTime }}</p>
+        <p><a href="{{ event.url }}" target="_blank">Ticket information</a></p>
+      </div>
+      <button (click)="addFave(eventList[i])">Add as favorite</button>
     </div>
   </section>
 </main>

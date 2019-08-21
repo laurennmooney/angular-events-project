@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { EventService } from "../event.service";
 import { NgForm } from "@angular/forms";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-search-criteria",
@@ -8,7 +9,7 @@ import { NgForm } from "@angular/forms";
   styleUrls: ["./search-criteria.component.css"]
 })
 export class SearchCriteriaComponent implements OnInit {
-  constructor(private eventService: EventService) {}
+  constructor(private eventService: EventService, private router: Router) {}
 
   ngOnInit() {}
 
@@ -18,6 +19,13 @@ export class SearchCriteriaComponent implements OnInit {
     startDate: string,
     endDate: string
   ): void {
-    this.eventService.getEventData(keyword, city, startDate, endDate);
+    this.router.navigate([`/eventlist`], {
+      queryParams: {
+        keyword: keyword,
+        city: city,
+        startDate: startDate,
+        endDate: endDate
+      }
+    });
   }
 }
